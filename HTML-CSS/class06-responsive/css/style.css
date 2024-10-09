@@ -1,0 +1,105 @@
+:root {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Courier New", Courier, monospace;
+  display: flex; /*deixar tela flex*/
+  flex-direction: column; /*voltar a deixar em colubna*/
+  justify-content: space-between; /*espaço entre colunas*/
+  height: 100vh; /* deixar tela toda*/
+  color: white;
+  background: #0d0d0d;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* espaço entre*/
+  padding: 2.4rem;
+  background: #0d0d0d;
+}
+h1 {
+  font-size: 1.6rem;
+}
+.appLogo {
+  width: 2.8rem;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; /*mesmo espaço entre colunas*/
+  flex-direction: column;
+  height: 100%; /*define 100% da tela do main*/
+  width: 100%; /*lagura 100%*/
+  padding: 1.2rem; /*prenchimento interno*/
+}
+.appBackground {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*cobre toda area disponivel*/
+  position: absolute; /*cria um dimensão */
+  z-index: -1; /*deixa a img atras com o "position"*/
+  filter: brightness(0.5) blur(4px); /*cria um filto! brilho 50%* e bluer 4px*/
+}
+section {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.2rem; /*espeço entre os section (preisa utilizar o display flex)*/
+}
+h2 span {
+  /* display: block; quebra a linha */
+  color: #77cff2;
+}
+button {
+  padding: 1.2rem 3.2rem;
+  border-radius: 0.8rem; /*arredonda a borda*/
+  font-weight: 700;
+  border: none; /*elimina a borda*/
+  background: #77cff2;
+}
+button:hover {
+  /*hover é quando passar por cima*/
+  background: #66bcf2;
+  cursor: pointer;
+  transition: 300ms;
+}
+.computer img {
+  width: 16rem;
+}
+footer {
+  padding: 2.4rem;
+  background: #0d0d0d;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .appLogo {
+    width: 4.2rem;
+  }
+  main {
+    flex-direction: row; /*deixa na mesma linha*/
+    padding: 2.4rem;
+  }
+  section {
+    align-items: start;
+    text-align: left;
+    width: 64rem;
+  }
+  .computer {
+    align-items: center;
+    width: 32rem;
+  }
+  .computer img {
+    width: 100%;
+  }
+}

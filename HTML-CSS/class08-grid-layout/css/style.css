@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: teal;
+  color: white;
+  display: grid; /*define a tela em colunas e linhas*/
+  grid-template-columns: 1fr 35%; /*divide as colunas no tamnho ou quantidade*/
+  grid-template-rows: 15% 60% 1fr 10%; /*divide as linhas*/
+}
+header {
+  grid-column: 1/3; /*define o header da linha 1 ao 3*/
+  border: solid 1px white;
+}
+main {
+  grid-column: 1/2; /*define o header da linha 1 ao 2*/
+  background: peru;
+}
+.suggestions {
+  grid-column: 2/3; /*define o header da linha 1 ao 3*/
+  padding: 24px;
+  overflow: auto; /*cria barra de rolagem*/
+
+  & article {
+    display: grid;
+    gap: 24px;
+  }
+
+  & section {
+    height: 180px;
+    width: 100%;
+    border: solid 1px white;
+  }
+}
+footer {
+  grid-column: 1/3; /*define o header da linha 1 ao 3*/
+}
+@media (max-width: 768px) {
+  /*ao chegar em 768px muda para definiçoes abaixo*/
+  body {
+    grid-template-rows: 15% 60% 1fr 10%; /*divide as linhas*/
+  }
+  main {
+    grid-column: 1/3;
+  }
+  .comments {
+    grid-column: 1/2;
+    grid-template-rows: 3/4;
+  }
+  .suggestions {
+    grid-row: 3/4;
+    grid-column: 1/3;
+
+    & article {
+      display: flex;
+    }
+  }
+}

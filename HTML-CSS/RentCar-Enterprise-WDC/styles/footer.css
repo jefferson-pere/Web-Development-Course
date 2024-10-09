@@ -1,0 +1,318 @@
+footer {
+  background: linear-gradient(315deg, #2966c2, #2865c2, #1e4b8f);
+  text-align: center;
+  padding: 2.4rem;
+  color: white;
+
+  & section + section {
+    border-top: 1px solid #fff4;
+  }
+  & h3 {
+    font-size: 1.8rem;
+    margin-top: 1.6rem;
+    text-shadow: 1px 1px 1px #0004;
+  }
+}
+
+.container article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4.2rem;
+}
+
+.subscribe {
+  padding: 0 2.4rem;
+
+  & h3 {
+    margin-top: 2.4rem;
+    font-size: 2rem;
+  }
+  & p {
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+  }
+  & form {
+    margin-top: 2.4rem;
+    font-size: 1.4rem;
+    width: 100%;
+    display: flex;
+    gap: 0.8rem;
+  }
+  & form input {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    border: none;
+    flex: 1;
+  }
+  & form button {
+    background: linear-gradient(#ffc44f, #cc9d3f);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    width: 10rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 1px #0004;
+    transition: filter 200ms;
+  }
+  & form button:hover {
+    cursor: pointer;
+    filter: brightness(1.05);
+  }
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+  padding: 2.4rem 0 0;
+
+  & h3 {
+    margin-bottom: 0.8rem;
+  }
+  & p {
+    font-size: 1.4rem;
+  }
+}
+.socialMedias {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: white;
+    font-size: 1.4rem;
+    border-bottom: 1.5px solid #0000;
+  }
+  & a:hover {
+    border-bottom: 1.5px solid #fff6;
+  }
+  & .logo {
+    max-width: 1.8rem;
+  }
+  & .logo img {
+    width: 100%;
+  }
+}
+.local {
+  width: 100%;
+  padding: 2.4rem;
+
+  & iframe {
+    width: 100%;
+    height: 24rem;
+    margin-top: 1.6rem;
+  }
+  & p {
+    font-size: 1.4rem;
+    margin-top: 0.8rem;
+  }
+}
+.help {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  font-size: 1.2rem;
+
+  & a {
+    color: white;
+    border-bottom: 1px solid #fff6;
+  }
+}
+.copyringht a {
+  font-size: 1.6rem;
+  margin-top: 3.2rem;
+  background: #fff2;
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+  text-shadow: 1px 1px 1px #0004;
+  display: block;
+  color: white;
+}
+
+/* tablet */
+@media (min-width: 768px) {
+  footer {
+    padding: 3.2rem;
+
+    & section + section {
+      border-top: 1.2px solid #fff4;
+    }
+    & h3 {
+      font-size: 2rem;
+      margin-top: 1.8rem;
+    }
+  }
+
+  .container article {
+    gap: 5.6rem;
+  }
+
+  .subscribe {
+    padding: 0 3.2rem;
+
+    & h3 {
+      margin-top: 3.2rem;
+      font-size: 2.4rem;
+    }
+    & p {
+      margin-top: 2rem;
+      font-size: 1.6rem;
+    }
+    & form {
+      margin-top: 3.2rem;
+      font-size: 1.6rem;
+      gap: 1.2rem;
+    }
+    & form input {
+      font-size: 1.6rem;
+      padding: 1.2rem;
+    }
+    & form button {
+      padding: 1.2rem;
+      width: 12rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  .contacts {
+    gap: 1.8rem;
+    padding: 3.2rem 0 0;
+
+    & h3 {
+      margin-bottom: 1.2rem;
+    }
+    & p {
+      font-size: 1.6rem;
+    }
+  }
+  .socialMedias {
+    gap: 4.2rem;
+
+    & a {
+      gap: 1.2rem;
+      font-size: 1.6rem;
+    }
+    & .logo {
+      max-width: 2rem;
+    }
+  }
+  .local {
+    padding: 3.2rem;
+
+    & iframe {
+      height: 28rem;
+      margin-top: 1.8rem;
+    }
+    & p {
+      font-size: 1.6rem;
+      margin-top: 1.2rem;
+    }
+  }
+  .help {
+    gap: 3.2rem;
+    font-size: 1.6rem;
+
+    & a {
+      border-bottom: 1.2px solid #fff6;
+    }
+  }
+  .copyringht a {
+    font-size: 1.8rem;
+    margin-top: 4.2rem;
+    padding: 2rem;
+  }
+}
+/* Desktop */
+@media (min-width: 1024px) {
+  footer {
+    padding: 4.2rem;
+
+    & section + section {
+      border-top: 1.5px solid #fff4;
+    }
+    & h3 {
+      font-size: 2.8rem;
+      margin-top: 2rem;
+    }
+  }
+
+  .container article {
+    gap: 6.4rem;
+  }
+
+  .subscribe {
+    & h3 {
+      font-size: 3.2rem;
+    }
+    & p {
+      font-size: 1.8rem;
+    }
+    & form {
+      font-size: 1.8rem;
+    }
+    & form input {
+      font-size: 1.8rem;
+    }
+    & form button {
+      width: 16rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  .contacts {
+    & h3 {
+      margin-bottom: 1.6rem;
+    }
+    & p {
+      font-size: 1.8rem;
+    }
+  }
+  .contact strong {
+    font-size: 1.8rem;
+  }
+  .socialMedias {
+    & a {
+      font-size: 2rem;
+    }
+    & .logo {
+      max-width: 2.4rem;
+    }
+  }
+  .local {
+    padding: 4.2rem;
+
+    & iframe {
+      height: 32rem;
+      margin-top: 2rem;
+    }
+    & p {
+      font-size: 1.8rem;
+      margin-top: 1.6rem;
+    }
+  }
+  .help {
+    font-size: 1.8rem;
+
+    & a {
+      border-bottom: 1.5px solid #fff6;
+    }
+  }
+  .copyringht a {
+    font-size: 2rem;
+    margin-top: 5.6rem;
+    padding: 2.4rem;
+  }
+}

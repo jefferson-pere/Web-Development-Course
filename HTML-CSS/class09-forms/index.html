@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="formulário para inscrição de curso" />
+    <meta name="description" content="Formulário de incrição de cursos" />
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form method="get">
+      <fieldset>
+        <legend>Formulário de inscrição</legend>
+        <section>
+          <label for="name"
+            >Nome <span title="Campo obrigatorio">*</span></label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            autofocus
+            required
+            placeholder="Digite seu nome"
+          />
+        </section>
+
+        <section>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="exemplo@email.com"
+          />
+        </section>
+
+        <div class="boxBirthPhone">
+          <section>
+            <label for="birth">Nascimento</label>
+            <input type="date" id="birth" name="birth" />
+          </section>
+
+          <section>
+            <label for="phone">Whatsapp <span>*</span></label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="(DDD)x.xxxx-xxxx"
+            />
+          </section>
+        </div>
+
+        <section>
+          <label for="course">Curso </label>
+          <select name="course" id="course">
+            <option value="Informática">Informática</option>
+            <option value="Mecânica">Mecânica</option>
+            <option value="Comandos">Comandos</option>
+            <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+          </select>
+        </section>
+
+        <section class="boxShift">
+          <fieldset>
+            <span>
+              <legend>Turno:</legend>
+            </span>
+
+            <span>
+              <label for="morning">Manhã</label>
+              <input
+                type="radio"
+                id="morning"
+                name="shift"
+                value="morning"
+                checked
+              />
+            </span>
+
+            <span>
+              <label for="afternoon">Tarde</label>
+              <input
+                type="radio"
+                id="afternoon"
+                name="shift"
+                value="afternoon"
+              />
+            </span>
+          </fieldset>
+        </section>
+
+        <section>
+          <label for="obs">Observações</label>
+          <textarea
+            name="obs"
+            id="obs"
+            maxlength="225"
+            placeholder="Digite uma pergunta ou sugestão"
+          ></textarea>
+        </section>
+
+        <section class="boxTerm">
+          <input
+            type="checkbox"
+            id="term"
+            name="term"
+            value="true"
+            required
+            oninvalid="this.setCustomValidity('Por favor, leia e aceite os termos de uso!')"
+            oninput="this.setCustomValidity('')"
+          />
+          <label for="term"
+            >Aceita os <a href="#">termos de uso</a>? <span>*</span></label
+          >
+        </section>
+
+        <button type="submit">Enviar</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

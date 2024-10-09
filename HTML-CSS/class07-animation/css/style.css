@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url(../images/stars.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.solarSystem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sun img {
+  width: 160px;
+  animation: toOrbit 36000ms infinite linear;
+}
+.lineOrbit {
+  border: 1px solid white;
+  border-radius: 100%;
+}
+.earth {
+  width: 360px;
+  height: 360px;
+  position: absolute;
+  animation: toOrbit 15000ms infinite linear;
+}
+.earth::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 56px;
+  background: url(../images/earth.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translate(100%);
+}
+.moon {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: -40px;
+  left: 14px;
+  animation: toOrbit 10000ms infinite linear; /**/
+  /*animation-iteration-count: infinite; quantas vezes repete
+  animation-timing-function: linear;deixa o movimento linear*/
+}
+.moon::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url(../images/moon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translate(12px);
+}
+@keyframes toOrbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

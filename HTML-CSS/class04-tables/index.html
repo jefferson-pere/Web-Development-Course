@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tabela" />
+    <title>Class04 Tables</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        text-align: center;
+        font-size: 32px;
+      }
+      caption,
+      th,
+      td {
+        border: 1px solid lightslategray;
+      }
+      th {
+        background: lightseagreen;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        COMPRAS
+      </caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Preço(R$)</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Arroz</td>
+          <td>10,00</td>
+        </tr>
+        <tr>
+          <td>Feijão</td>
+          <td>28,00</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th scope="row">Total</th>
+          <td>38,00</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
+
+<!--
+<table> <-- tabela--
+    <thead></thead> <--cabeça da tabela--
+    <tbody></tbody> <--corpo da tabela--
+    <tfoot></tfoot> <--baixo da tabela--
+</table> 
+
+
+<td> dados da coluna
+</th> coluna da tabela e titulo
+</tr> linha da tabela
+-->
