@@ -143,3 +143,20 @@ console.log((dateNow - birthday) / 1000 / 60 / 60 / 24 / 365.25);
 console.log(dateNow.getFullYear());
 console.log(birthday.getFullYear());
 console.log(dateNow.getFullYear() - birthday.getFullYear());
+
+///////
+
+function palindromo(text) {
+  const original = text.toLowerCase().replaceAll(" ", "");
+  const reversedText = original.split("").reverse().join("");
+  return original == reversedText;
+}
+console.log(palindromo("osso"));
+
+// DIAS FALTANDO
+const newYear = new Date("2025-01-01 00:00:00");
+const dateNow2 = new Date();
+const missing = Math.floor((newYear - dateNow2) / 1000 / 60 / 60 / 24);
+
+console.log(`Faltam ${missing} dias para o ano novo !`);
+
