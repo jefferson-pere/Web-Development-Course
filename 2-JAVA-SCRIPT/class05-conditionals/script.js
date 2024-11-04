@@ -45,6 +45,7 @@ const num2 = 2;
 const isAdmin = true;
 
 try {
+  // tenta
   if (isAdmin) {
     console.log("Ver relatório: " + num2);
   } else {
@@ -57,3 +58,17 @@ try {
 }
 
 document.write("App is Online");
+
+const n1 = 7;
+const n2 = 7;
+const n3 = 8;
+
+const average = (n1 + n2 + n3) / 3;
+console.log(average);
+if (average >= 7) {
+  console.log("Aprovado por média");
+} else if (average >= 3) {
+  console.log("Aluno em recuperação");
+} else {
+  console.log("Aluno Reprovado!");
+}
