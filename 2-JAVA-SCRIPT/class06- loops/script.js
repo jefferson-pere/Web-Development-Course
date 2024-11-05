@@ -41,3 +41,18 @@ for (let i = 0; i < students.length; i++) {
     console.log(`${students[i].name}, Reprovado com média: ${avg}`);
   }
 }
+
+// sorteio de 6 numeros
+const numbers = [];
+
+while (numbers.length < 6) {
+  const draw = Math.ceil(Math.random() * 60);
+  const numerFormatted = String(draw).padStart(2, 0);
+
+  if (numbers.includes(numerFormatted)) {
+    continue;
+  } else {
+    numbers.push(numerFormatted);
+  }
+}
+console.log(numbers.sort((a, b) => a - b).join("-"));
