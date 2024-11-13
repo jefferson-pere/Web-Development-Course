@@ -38,9 +38,15 @@ function basic() {
   num2 = null;
 }
 
-
-
-//ao passar o mouse
+//Ao passar o mouse
 title.addEventListener("mouseenter", () => {
   console.log("title");
+});
+
+// Ao digitar
+const myInput = document.querySelector("input");
+console.log(myInput);
+
+myInput.addEventListener("keyup", () => {
+  console.log(myInput.value);
 });
