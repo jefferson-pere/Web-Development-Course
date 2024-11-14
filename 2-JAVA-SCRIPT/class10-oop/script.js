@@ -43,5 +43,25 @@ console.log(control1.isOn);
 console.log(control1.power());
 console.log(control1.isOn);
 console.log(control1.upper());
-console.log(control1.upper());
 console.log(control1.down());
+
+//controle
+const powerButton = document.querySelector(".power");
+const upButton = document.querySelector(".up");
+const downButton = document.querySelector(".down");
+const displayValeu = document.querySelector(".display");
+
+const airButton = new Control(17, "Cinza");
+
+powerButton.addEventListener("click", () => {
+  airButton.power();
+  displayValeu.innerHTML = airButton.isOn ? `${airButton.temp}ºc` : "";
+});
+
+upButton.addEventListener("click", () => {
+  displayValeu.innerHTML = `${airButton.upper()}ºc`;
+});
+
+downButton.addEventListener("click", () => {
+  displayValeu.innerHTML = `${airButton.down()}ºc`;
+});
