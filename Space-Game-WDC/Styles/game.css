@@ -1,0 +1,60 @@
+@import url(reset.css);
+
+.spaceContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  &:hover {
+    cursor: none;
+  }
+}
+header {
+  padding: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.life,
+.name,
+.score {
+  font-weight: 700;
+}
+.spaceship {
+  background: url(../images/spaceship1.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  width: 9rem;
+  height: 9rem;
+  bottom: calc(0% + 0.5rem);
+  left: calc(50% - 4.5rem);
+}
+.shot {
+  position: absolute;
+  z-index: 1;
+  background: var(--color-secondary-400);
+  box-shadow: 0 0 10px 2px var(--color-secondary-400);
+  width: 0.5rem;
+  height: 4rem;
+  margin: 0 auto;
+  border-radius: 10%;
+  transform: translateX(-50%);
+  animation: shortAnimation 500ms linear;
+  animation-fill-mode: forwards;
+}
+.specialShot {
+  position: absolute;
+  z-index: 1;
+  background: var(--color-primary-500);
+  box-shadow: 0 0 10px 2px var(--color-primary-500);
+  filter: brightness(1.2);
+  width: 0.75rem;
+  height: 4rem;
+  margin: 0 auto;
+  border-radius: 10%;
+  transform: translateX(-50%);
+  animation: shortAnimation 500ms linear;
+  animation-fill-mode: forwards;
+}
