@@ -1,4 +1,5 @@
 import imageReact from "./assets/react.svg"; //import img
+import { Button } from "./components/Button";
 
 //named export
 export function App() {
@@ -10,6 +11,12 @@ export function App() {
       <img src={imageReact} alt="" />
 
       <img src="../public/vite.svg" alt="" />
+
+      <div>
+        <Button title="Login" color="red" />
+        <Button title="Adquirir" color="blue" />
+        <Button title="Sair" />
+      </div>
     </>
   );
 }
