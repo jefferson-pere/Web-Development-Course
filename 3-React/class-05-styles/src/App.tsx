@@ -4,7 +4,6 @@ import { Container } from "./style";
 export function App() {
   return (
     <Container>
-      [1]
       <CardManga
         title={"One Piece"}
         link={
