@@ -1,25 +1,32 @@
 import { NextFunction, Request, Response } from "express";
 import { AppError } from "../errors/app-error";
 import { z } from "zod";
+import { sqliteConnection } from "../databases";
 
 //zod
 const UserSchema = z.object({
   name: z.string({ message: "Nome é obrigatório!" }),
-  series: z.string().max(20, "Maximo de 20 caract"),
-  age: z.number(),
   email: z.string().email(),
+  password: z.string().min(3, "Minimo de 3 caract"),
 });
 
 export const userControllers = {
-  create(req: Request, res: Response, next: NextFunction) {
+  async create(req: Request, res: Response, next: NextFunction) {
     try {
-      const { name, series, age, email } = UserSchema.parse(req.body);
+      const { name, email, password } = UserSchema.parse(req.body);
+      const user = {
+        id: "3",
+        name,
+        email,
+        password,
+      };
 
-      if (!name || !series) {
-        throw new AppError(400, "Todos os dados são obrigatórios!");
-      }
+      const db = await sqliteConnection();
 
-      console.log({ name, series, age, email });
+      const sqlQuery =
+        "INSERT INTO users (id, name, email, password) VALUES (?,?,?,?)";
+      await db.run(sqlQuery, [user.id, user.name, user.email, user.password]);
+
       res.status(201).json({ message: "user created" });
     } catch (error) {
       next(error);
